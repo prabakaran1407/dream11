@@ -43,7 +43,7 @@ export const createTeam = async (req, res) => {
 
     //CAPTAIN VALIDATION
 
-    const isValidCaptain = fullTeamPlayers.includes(captain);
+    const isValidCaptain = players.includes(captain);
 
     if (!isValidCaptain) {
       throw new Error(`Captain Not Found`);
@@ -51,7 +51,7 @@ export const createTeam = async (req, res) => {
 
     //VICE CAPTAIN VALIDATION
 
-    const isValidViceCaptain = fullTeamPlayers.includes(viceCaptain);
+    const isValidViceCaptain = players.includes(viceCaptain);
 
     if (!isValidViceCaptain) {
       throw new Error(`Vice Captain Not Found`);
